@@ -9,9 +9,9 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-    favorite = Favorite.find_by(tweet_id: params[:tweet_id, user_id], user_id: current_user.id)
+    favorite = Favorite.find_by(tweet_id: params[:tweet_id], user_id: current_user.id)
     favorite.destroy
     redirect_to tweets_path
-    
+
   end
 end
